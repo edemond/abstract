@@ -1,0 +1,38 @@
+
+manual notes
+
+introduction
+
+motivation, why abstract?
+- write music like you write programs
+- instead of laboriously "plunking down notes one at a time"
+
+what is abstract?
+- "computer-aided composition"
+
+
+music
+	pitches
+	scales
+	arpeggios
+	octaves
+	chords
+	rhythms
+
+special forms
+	default statement
+	bpm statement
+	ppq statement
+
+chord notation
+
+structure
+
+	parts
+		simple
+		compound
+		block
+
+	functions
+
+

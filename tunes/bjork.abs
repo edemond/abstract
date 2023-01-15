@@ -1,0 +1,49 @@
+bpm 65
+
+let MIDI_CHANNEL = 1
+
+// instrument definitions
+let boss = instrument("UM-2 MIDI 2 (hw:1,0,1)", MIDI_CHANNEL, 16)
+let kick = note(36)
+let kick2 = note(49) // kick 2
+let snare = note(38)
+let snare2 = note(56) // snare 2
+let snare3 = note(50)
+let ch = note(42)
+let oh = note(46)
+let ph = note(44)
+let clap = note(39) // ride brushes
+let tom2 = note(48)
+let tom3 = note(45)
+let tom4 = note(41)
+let crash1 = note(49)
+let crash2 = note(57)
+let bell = note(53)
+let ride = note(51)
+
+
+let beat = {
+	default boss
+	let n = 7 
+	let kicks = bjork(3, n) kick
+	let kicks2 = bjork(3, n) kick2
+	let snares(s1, s2) = bjork(2, n) s1 | bjork(2, n) s2
+	let snares2(s1, s2) = bjork(1, n) s1 | bjork(3, n) s2
+	let chh = ch bjork(7, 14) dynamics(40, 10)
+	let ohh = oh bjork(6, 14)
+
+	let basic_beat(k, s) = k | s | chh | ohh
+	let sn = snares(snare2, snare3)
+
+	basic_beat(kicks, sn)
+	basic_beat(kicks, sn)
+	basic_beat(kicks, sn)
+	basic_beat(kicks, sn)
+	basic_beat(kicks2, sn)
+	basic_beat(kicks2, sn)
+	basic_beat(kicks, sn)
+	basic_beat(kicks, sn)
+}
+
+beat //| chordmeasure
+

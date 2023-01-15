@@ -1,0 +1,5 @@
+*.swp
+*.swo
+*.swn
+abstract
+parser/y.output

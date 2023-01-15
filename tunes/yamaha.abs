@@ -1,0 +1,76 @@
+bpm 150
+ppq 32
+
+let kick1 = note(36)
+let kick2 = note(37)
+let kick3 = note(38)
+let snare1 = note(41) // actually 39
+let snare2 = note(40)
+let snare3 = note(41)
+let noise = note(42)
+let crash = note(43)
+let mpc = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 10)
+let korg = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 10)
+let note1 = note(40)
+
+default mpc dynamics(100)
+
+let r1 = rhythm(0x83785902, 0x80808080, 0x81)
+let r2 = rhythm(0x27893, 0x813704, 0x202020)
+let r3 = rhythm(0x2893, 0x13704, 0x02020)
+let n1 = snare3 rhythm(0x22, 0x20, 0x21)
+let n2 = snare2 rhythm(0x2222, 0x8000, 0x8080)
+
+let bass = {
+	default korg meter(2,4)
+	let bassline = note1 rhythm(0x80808080, 0x8632)
+	bassline
+	bassline
+	bassline
+	bassline
+	bassline
+	bassline
+}
+
+let break = {
+	default meter(2,4)
+	kick1 r1 | kick2 r1 | kick3 r1
+}
+
+let beat = {
+	kick1 r1 | snare1 r2 | kick3 r3 | n1
+	kick1 r2 | snare1 r3 | kick3 r1 | n1
+	kick1 r3 | snare1 r1 | kick3 r2 | n1 | break
+	kick2 r1 | snare3 r2 | snare1 r3 | n1 | n2
+	kick2 r2 | snare3 r3 | snare1 r1 | n1 | n2
+	kick2 r3 | snare3 r1 | snare1 r2 | n1 | n2 | break
+}
+
+break
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+kick1 r1 | bass
+kick1 r1 | break | bass
+beat | bass
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat
+beat

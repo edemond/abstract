@@ -1,0 +1,12 @@
+bpm 140
+
+default instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 16)
+
+let hi(o) = o rhythm(0x8888)
+let mid(o) = o bjork(3,17) 
+let lo(o) = o bjork(5,23)
+
+lo(O1) | hi(O5)
+lo(O1) | mid(O3)
+lo(O1)
+mid(O2) | hi(O4)

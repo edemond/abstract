@@ -1,0 +1,29 @@
+let piano = instrument("output", 1, 88)
+
+let rock(k,s) = {
+    [k s s k]
+}
+
+let triplets(x) = {
+    [x x x]
+}
+
+rock(C5, G5) | triplets(O5 C5)
+triplets(F5) | triplets(O5 C5)
+
+/*
+rock(C5, G5)
+rock(C5, F5)
+G5
+triplets(F5)
+rock(C5, C5)
+*/
+
+
+// This is a bug here:
+/*
+let triplets(x) = {
+    let x2 = dynamics(40) x
+    [x x2 x2]
+}
+*/

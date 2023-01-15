@@ -1,0 +1,30 @@
+let keys = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 4)
+//let midi2 = instrument("UM-2 MIDI 2 (hw:1,0,1)", 2, 4)
+
+default keys
+
+let C = pitch(0)
+let D = pitch(2)
+let Db = pitch(3)
+let G = pitch(7)
+
+let block = {
+	O3 G rhythm(0xA0000, 0x800) keys meter(5,4) | O4 C rhythm(0x80000) keys
+}
+
+let beat = rhythm(0x8000, 0x80008002, 0x801) O5
+
+let chords = {
+	beat | G block
+	beat G
+	beat
+	beat D
+}
+
+chords
+chords
+chords
+chords
+//rhythm(0xB0, 0x80) keys | rhythm(0xF0) keys
+//rhythm(0xA0, 0x80) keys | rhythm(0xF0) keys
+//rhythm(0xF) keys | rhythm(0xA, 0x80) 

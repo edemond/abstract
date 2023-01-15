@@ -1,0 +1,40 @@
+bpm 120
+ppq 64 
+
+let beats = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 10)
+let kick = note(36)
+let snare = note(38)
+let clap = note(39)
+let lotom = note(43)
+let hitom = note(50)
+
+default beats kick meter(4,4)
+
+let floor = kick rhythm(0x8888)
+let what = rhythm(0x889F8, 0x88888, 0x80808) 
+let huh = snare rhythm(0x0808) //| clap rhythm(0x8000000000000000)
+let toms = lotom rhythm(0x2222,0x201f) | hitom rhythm(0x2039, 0x4382, 0x1111, 0x8080)
+
+hitom meter(7,8) rhythm(0x2039, 0x4382, 0x1111, 0x8080)
+toms
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+toms | floor
+
+//let bar = {
+//	quarter
+//	quarter
+//	quarter
+//	quarter
+//}
+
+//bar
+//bar
+//bar
+//bar

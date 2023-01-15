@@ -1,0 +1,59 @@
+bpm 120 
+let piano = instrument("out_synth", 1, 88)
+let drums = instrument("out_drums", 1, 20)
+default piano meter(4,4) dynamics(100,20) rhythm(0x8000) //rhythm(0x8802, 0x8020)
+
+let stuff = {
+    //meter(2,4) Cmaj
+    //meter(2,4) Emin
+    //meter(2,4) G7
+    Cmaj
+    Emin
+    G7
+    Cmaj O5
+}
+
+//stuff
+
+
+//let prog(key) = {
+//    default key minor
+//    @Imin7 | @Vmin
+//    @IVmin7add2 | @VI5 O5
+//    @Vmin7 | @II O5
+//    @Imin9
+//}
+
+let prog(key, sc) = {
+    default key sc human(500)
+    @Iadd7 | @V
+    @IVadd7add2 | @VI5 O5
+    @V //| @IV O5
+    @Iadd7add9
+}
+
+//prog(C, major)
+//prog(Eb, minor)
+
+let alt(k, o) = {
+    default k o rhythm(0x88888888, 0x80808080, 0x80008000)
+    vimin7
+    IVadd2
+    Iadd2
+    Vadd4
+}
+
+let bass = {
+    default rhythm(0x8) O2
+    F#
+    D
+    A
+    E
+}
+
+alt(A, O4) | alt(E, O5)
+alt(A, O4) | alt(A, O5)
+alt(A, O4) | alt(A, O5) | bass
+alt(A, O4) | alt(A, O6) | bass
+alt(A, O6) | bass
+alt(A, O6) | bass

@@ -1,0 +1,23 @@
+bpm 60
+let piano = instrument("output", 1, 88)
+default dynamics(80,20) meter(3,4) piano 
+
+let m21(a,b,o) = {
+    default o
+    2/4 a
+    1/4 b
+}
+
+let m21h(a,b) = {
+    2/4 a
+    1/4 b
+}
+
+let m54(a,b) = {
+    5/4 a O6
+    1/4 b O6
+}
+
+m21(Cmaj7, Emin7)
+m54(Fmaj9, Gsus4add6) | m21(D5, Dsus4add7, O6)
+3/4 F | O4 C5

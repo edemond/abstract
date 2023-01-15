@@ -1,0 +1,32 @@
+bpm 100
+let korg = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 10)
+let kawai = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 10)
+let major = scale(2,2,1,2,2,2,1)
+let minor = scale(2,1,2,2,1,2,2)
+
+//default O3 korg major meter(4,4) rhythm(0x88888888)
+default O5 kawai minor meter(4,4)
+
+let main(k1, k2) = {
+	//k1 arp(1,7,5,12) bjork(4, 8) | k2 arp(1,7,5,14,5) bjork(4,8) | k1 O4 arp(1,8) bjork(6,8)
+	k1 arp(1,7,5,12,7) bjork(4, 8) dynamics(100,20)
+}
+
+let accent(k) = {
+	k arp(12,24,36) bjork(4,8) dynamics(40,10)
+}
+
+let repeat3(x) = {
+	x
+	x
+	x
+}
+
+repeat3({
+	repeat3({
+		repeat3(main(C, G) | accent(C)) 
+		main(F, C) | accent(C)
+	})
+	main(G, D) | accent(C)
+})
+

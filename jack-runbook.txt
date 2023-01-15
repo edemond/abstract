@@ -1,0 +1,14 @@
+Problems you'll likely encounter with JACK:
+
+How to use Jack:
+
+Launch QjackCtl
+
+Create instruments in Abstract
+
+    instrument("output name", <midi channel 1-16>, <voices of polyphony>)
+
+Set up patchbay
+    
+    Run Abstract and connect the 
+

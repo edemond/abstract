@@ -1,0 +1,9 @@
+// it's a comment
+let x = C# mixolydian
+let y=Db mixolydian
+x | y | arp(stuff) Bb minor voice(23,31343)
+
+let block = {
+	x | C major arp(1) | x
+}
+// comment is the last thing you see

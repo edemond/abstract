@@ -1,0 +1,7 @@
+bpm 60
+ppq 16 
+let piano = instrument("piano-output", 1, 88)
+default dynamics(80,20) meter(4,4) piano
+
+// Nested seq expressions
+[Cmaj Fmaj [Dmin7 G7] Cmaj9no7]

@@ -1,0 +1,24 @@
+let piano = instrument("output", 1, 88)
+
+let id(x) = {
+    x
+} 
+
+let m21h(a,b) = {
+    2/4 a
+    1/4 b
+}
+
+let m21(a) = {
+    a
+}
+
+let r332(x) = {
+    3/8 x
+    3/8 x 
+    2/8 x
+}
+
+//O5 Cmaj
+//O5 m21(Cmaj) // bug, m21 gets reduced to a simple part
+O3 m21h(D5, Dmin7) // bug, the octave doesn't apply

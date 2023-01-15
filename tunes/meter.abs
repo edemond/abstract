@@ -1,0 +1,13 @@
+bpm 120
+
+//default jack("Pianoteq", "midi_in", 1, 88)
+default jack("output", 1, 88)
+
+let blah = {
+    C
+    D
+    E
+    G
+}
+
+blah

@@ -1,0 +1,6 @@
+bpm 60
+let piano = instrument("piano-output", 1, 88)
+default dynamics(80,20) meter(4,4) piano
+
+// Basic seq expression
+[Cmaj Fmaj G7 Cmaj]

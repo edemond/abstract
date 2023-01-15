@@ -1,0 +1,29 @@
+bpm 60
+//ppq 32
+//let piano = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 16)
+let piano = instrument("output", 1, 16)
+//default piano rhythm(0x88888888, 0x7238, 0x80808080) meter(4,4) dynamics(80, 80)
+default piano rhythm(0x88888888) meter(4,4) dynamics(80, 80)
+
+
+let chords2 = {
+	Cmaj 
+	Fmaj7add2 //voicing(0x29490000100000)
+	G5 O3 | Fmaj O4
+    Dmin7
+    G7
+	Cmaj7
+}
+
+let min7 = chord(0,3,7,10)
+
+let chords = {
+	//D min7
+	//C# maj7
+	//C min7
+	B5 O3 | Amaj O4
+	//Bb maj7
+}
+
+chords2
+

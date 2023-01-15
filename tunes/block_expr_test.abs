@@ -1,0 +1,8 @@
+let parameterized(a, b, c) = { 
+    a b 
+    c
+}
+parameterized(C, D, E)
+
+a b @I | d(x, y) e 
+// hi

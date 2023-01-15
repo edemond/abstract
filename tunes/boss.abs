@@ -1,0 +1,18 @@
+let boss = instrument("UM-2 MIDI 2 (hw:1,0,1)", 2, 32)
+
+let kick = note(36)
+let snare = note(38)
+let ch = note(42)
+let oh = note(46)
+let ph = note(44)
+let stick = note(37) // kick 2
+let clap = note(39) // ride brushes
+let cow = note(56) // snare 2
+let tom1 = note(50)
+let tom2 = note(48)
+let tom3 = note(45)
+let tom4 = note(41)
+let crash1 = note(49)
+let crash2 = note(57)
+let bell = note(53)
+let ride = note(51)

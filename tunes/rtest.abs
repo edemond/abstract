@@ -1,0 +1,70 @@
+bpm 60
+let piano = instrument("output", 1, 88)
+default dynamics(80,20) meter(4,4) piano
+
+let r(x) = {
+    x prob(0, 8, 50) | x prob(1, 1, 100) | x prob(0, 16, 20)
+}
+
+let intro(key, scale) = {
+    default key scale
+    let bass(ch) = ch O3
+    //bass(@I5) | @I prob(0,8,50) | C O5
+    //bass(@I5) | @I | C O5
+    bass(@I5) | r(@I) | C O5
+    bass(@I5) | r(@VIIno5) | C O5
+    /*
+    @I5 O3 | @I 
+    @I5 O3 | @VIIno5 | C O5
+    @I5 O3 | @I 
+    @III5 O3 | @IIIadd2 O5 // major lift
+    @VII5 O3 | @VII
+    @VII5 O3 | @VIIadd4
+    @VI5 O3 | @VIadd2
+    @VII5 O3 | @VIIsus4
+    2/4 @IV5 O3 | 2/4 @VI
+    2/4 @V5 O3 | 2/4 @VII // wrong, needs to be an inverted @III
+    @VI5 O3 | @VIadd2
+    @IV5 O3 | Vsus2 | D O5 // the cool chord
+    @VI5 O3 | @VIadd2
+    @VII5 O3 | @VIIadd4no5 velocity(0x80020000) | C O5
+    @VII5 O3 | @VIIadd4no5 velocity(0x80008088) | C O5
+    */
+}
+
+// Proposed short syntax for meter:
+let theme(key, scale) = {
+    default key scale
+    3/8 @I
+    5/8 @III
+    @VII
+    2/4 @VI
+    2/4 @III
+    3/4 @VIIsus4
+    1/4 @VII
+}
+
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+intro(A, minor)
+theme(A, minor)
+theme(A, minor)
+theme(A, minor)
+theme(A, minor)
+intro(A, minor) // first solo
+// TBD lol
+
+/*
+let pulse = velocity(0x88888888,0x08080808) C dynamics(50,20) O6
+intro(A, minor) | pulse
+theme(A, minor) | pulse
+theme(A, minor) | pulse
+theme(A, minor) | pulse
+theme(A, minor) | pulse
+intro(A, minor)
+*/

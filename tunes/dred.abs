@@ -1,0 +1,83 @@
+bpm 125
+
+let MIDI_CHANNEL = 1
+let midi1 = "UM-2 MIDI 1 (hw:1,0,0)"
+
+// instrument definitions
+let dx7 = instrument("UM-2 MIDI 2 (hw:1,0,1)", MIDI_CHANNEL, 16)
+let boss = instrument(midi1, MIDI_CHANNEL, 32)
+let kick = note(36)
+let kick2 = note(37) // kick 2
+let snare = note(38)
+let snare2 = note(56) // snare 2
+let snare3 = note(50)
+let ch = note(42)
+let oh = note(46)
+let ph = note(44)
+let clap = note(39) // ride brushes
+let tom2 = note(48)
+let tom3 = note(45)
+let tom4 = note(41)
+let crash1 = note(49)
+let crash2 = note(57)
+let bell = note(53)
+let ride = note(51)
+
+// beat
+let kicks = rhythm(0x80080808) boss kick
+let kicks2 = rhythm(0x80080A20, 0x80080820) boss kick
+let snares = rhythm(0x00800080) boss snare3
+let snares2 = rhythm(0x00800080) boss snare2 dynamics(80, 0)
+let chh = rhythm(0xBFF7, 0x8888) boss ch dynamics(120, 10)
+let ohh = rhythm(0x4008) boss oh dynamics(56,0)
+
+let measure = kicks | snares | snares2 | chh | ohh
+let measure2 = kicks2 | snares | snares2 | chh | ohh
+let beat = {
+	measure
+	measure2
+	measure
+	measure2
+}
+
+let compound(x,y) = x | y
+//let identity(x) = x
+
+//let repeat(m1, m2) = {
+//	m1
+//	m2
+//	m1
+//	m2
+//}
+
+//let beat = repeat(measure1, measure2)
+
+// keyboard parts
+let seven = 7
+let number = seven
+let oct = O7
+
+let maj = chord(0, 2, 4, number)
+let min = chord(0, 3, number)
+let minadd2 = chord(0, 2, 3, 7)
+let fifth = chord(0, 7)
+let thirdadd2 = chord(0,2,4)
+
+let beats = 4
+let value = 4
+
+let chords = {
+	default meter(beats,value) dynamics(80,20) dx7
+	E fifth O4 | E minadd2 oct
+	B fifth O3 | B min O4
+	C fifth O4 | C thirdadd2 oct
+	A fifth O3 | C maj oct
+}
+
+let chordmeasure = {
+	chords
+	chords
+}
+
+beat | chordmeasure
+

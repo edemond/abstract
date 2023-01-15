@@ -1,0 +1,41 @@
+bpm 120
+ppq 64 
+
+let beats = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 10)
+let snare = note(38)
+let kick = note(36)
+let lotom = note(43)
+let hitom = note(50)
+let clap = note(39)
+
+let a = arp(0x7823457289325922)
+
+default beats kick meter(4,4)
+
+let floor6 = lotom rhythm(0x8387, 0xAAAA, 0xA0A0)
+let floor4 = kick rhythm(0x8)
+let floor8 = kick rhythm(0x808A, 0x8080)
+let claps = clap rhythm(0x22)
+
+let junk = {
+	kick rhythm(0x5784, 0x8532, 0x73485784) | lotom rhythm(0x808080, 0x0202, 0xAB78)
+	kick rhythm(0x5B54, 0x9932, 0x72938384) | lotom rhythm(0x808080, 0x0202, 0xAB78)
+}
+
+let stuff = {
+	hitom rhythm(0xAAAA, 0x1789C245, 0x808080BB)
+	hitom rhythm(0xAAAA, 0x23E484BA, 0x808080BB)
+}
+
+let snarz = {
+	snare rhythm(0x42789327F078, 0x808080808080, 0xA0A0A0A0A0A0)
+	snare rhythm(0x42789327F078, 0x808080808080, 0xA0A0A0A0A0A0)
+}
+
+junk | claps | stuff
+
+junk | claps | stuff
+floor6 | junk | claps | stuff
+junk | claps | stuff | snarz
+junk | claps | stuff | snarz
+

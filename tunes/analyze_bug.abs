@@ -1,0 +1,10 @@
+bpm 140
+bpm 50
+let piano = instrument("output", 1, 88)
+default piano rhythm(0x80808080)
+
+let barf = {
+    @Vsus4
+}
+
+barf | Bb

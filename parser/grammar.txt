@@ -1,0 +1,47 @@
+Statement ::= LetStatement
+    | DefaultStatement
+    | BPMStatement
+    | PPQStatement
+    | Expression
+
+DefaultStatement ::= default SimpleExpression
+
+BPMStatement ::= bpm Number
+
+PPQStatement ::= ppq Number
+
+LetStatement ::= let Identifier = Expression
+    | let Identifier FormalParameterList = Expression
+
+Expression ::= BlockExpression
+    | CompoundExpression
+    | SimpleExpression
+
+BlockExpression ::= { StatementList }
+
+CompoundExpression ::= SimpleExpression '|' SimpleOrCompoundExpression
+
+SimpleOrCompoundExpression ::= CompoundExpression
+    | SimpleExpression
+
+StatementList ::= Statement 
+    | Statement StatementList
+
+SimpleExpression ::= Value
+    | Value SimpleExpression
+
+MeterExpression ::= Number '/' Number
+
+Value ::= Identifier
+    | MeterExpression
+    | String
+
+FormalParameterList ::= ( ParamList )
+
+ParamList ::= Identifier
+    | Identifier ',' ParamList
+
+ParameterizedExpression ::= Identifier ( ArgumentList )
+
+ArgumentList ::= Expression
+    | Expression ',' ArgumentList

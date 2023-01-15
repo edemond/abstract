@@ -1,0 +1,10 @@
+
+bpm 60
+let keys = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 16)
+
+let bass = C O3 keys rhythm(0x70128347, 0x65150100162)
+let alto = G O3 keys rhythm(0x3247928734, 0x712845772)
+let soprano = D O5 keys rhythm(0x2372F45D2720, 0x782354672)
+
+let part = bass | alto | soprano
+part

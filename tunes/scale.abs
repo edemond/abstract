@@ -1,0 +1,3 @@
+let keys = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 10)
+
+let major = scale(2,2,1,2,2,2,1)

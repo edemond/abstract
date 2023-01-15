@@ -1,0 +1,2 @@
+JACK driver doesn't loop!
+Block comments throw off the line count when reporting errors.

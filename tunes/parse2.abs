@@ -1,0 +1,2 @@
+let dx7 = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 16)
+let maj = chord(0, 2, 4, 7)

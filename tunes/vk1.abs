@@ -1,0 +1,23 @@
+bpm 20
+let keys = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 16)
+
+default keys O5
+
+/*
+let fig(c) = {
+    let soft(x) = dynamics(40) x
+    //let soft(x) = x
+    [c soft(c) soft(c)]
+}
+
+let chords = {
+    fig(Amin) | arp(1,3,5,7) Amin7
+    fig(Fmaj9)
+    fig(Gsus4)
+    fig(Gsus)
+}
+
+chords
+chords
+*/
+//arp(0,7,0,5) A minor

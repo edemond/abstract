@@ -1,0 +1,21 @@
+let beats = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 10)
+//let beats = instrument("output", 1, 10)
+default beats
+
+let kick = note(36)
+let snare = note(38)
+let lotom = note(43)
+let hitom = note(50)
+let ch = note(42)
+let oh = note(46)
+let clap = note(39)
+
+let soft(x) = {
+    cc(1, 40, 40)
+}
+
+let rock(k,s) = {
+    [k k soft(k) soft(k)]
+}
+
+rock(kick, snare)

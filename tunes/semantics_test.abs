@@ -1,0 +1,21 @@
+//let x = { }
+let C = pitch(1)
+let D = pitch(2)
+let arpy = arp(0x03)
+let kawai = instrument("UM-2 MIDI 1 (hw:1,0,0)", 3,6)
+let korg = instrument("UM-2 MIDI 2 (hw:1,0,1)", 3,6)
+let phrase = {
+	let E = pitch(4)
+	E
+	E
+}
+let beat = rhythm(0x101)
+
+let bad = pitch(1) 
+//let phrase = D C
+//
+//
+//C
+arpy C phrase
+//C
+phrase

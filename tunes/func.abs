@@ -1,0 +1,22 @@
+bpm 125
+//let synth = instrument("UM-2 MIDI 1 (hw:1,0,0)", 1, 16) // esq-1
+let synth = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 16) // volca
+default synth rhythm(0x80)
+
+
+let stuff(oct) = {
+	let r = rhythm(0x8723, 0x8080)
+	C oct r
+	G oct r
+}
+
+let thing = {
+	//stuff(O3) | stuff(O4)
+	stuff(O3) | C O5
+	stuff(O4) 
+	//stuff(O5)
+	//stuff(O6)
+}
+
+thing
+

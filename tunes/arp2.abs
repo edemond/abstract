@@ -1,0 +1,17 @@
+bpm 120
+
+let synth1 = instrument("UM-2 MIDI 2 (hw:1,0,1)", 1, 16)
+
+default synth1 rhythm(0x88888888) O5 dynamics(100, 20)
+
+let major = scale(2,2,1,2,2,2,1)
+
+let thing(p) = {
+	default p
+	I arp(1,2,3,2,1) | I arp(3,4,5)
+	ii6 arp(1,2,3,2,1) | ii6 arp(3,4,5)
+}
+
+//thing(F)
+
+I arp(1,2,3)
