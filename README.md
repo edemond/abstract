@@ -36,7 +36,7 @@ Non-goals of the project included, above all, [livecoding](https://en.wikipedia.
 One thing I ran into in the course of building Abstract is that the notion of a "chord" is not very precise, and a major challenge in making a streamlined language was how to represent these. There are at least three or four kinds of things that we mean when we say "chord", all of them potentially useful in the language:
 
 1. An "absolute" chord: a collection of concrete pitches. Cmaj: C, E, G.
-2. A "diatonic" chord: in functional harmony, the triad (or beyond) that you form in the context of a scale starting from a given scale degree, possibly with modifiers. The iii or V7 chord of a particular scale.
+2. A "diatonic" chord: in functional harmony, the triad (or beyond) that you form in the context of a scale starting from a given scale degree, possibly with modifiers. This is thus a collection of scale degrees. The iii or V7 chord of a particular scale.
 3. A "relative" chord, i.e. a chord quality: major, minor seventh, ninth, and so on. This is a collection of intervals without reference to a particular scale.
 
 Chords can be collections of pitches, collections of scale degrees, colletions of intervals, a chord from functional or diatonic harmony, and probably more. All of them are useful in different situations and probably ought to be represented in the language. Abstract has support for most of these, but who knows if the syntax I landed on is a good one.
