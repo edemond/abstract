@@ -35,6 +35,7 @@ Non-goals of the project included, above all, [livecoding](https://en.wikipedia.
 Were I to pick this project up again, what I would focus on next is a mini-language for synthesizing musical expressions.
 Again, musical expression is a really high-dimensional space, and only something like a separate language could begin to address meaningful parts of it.
 That, then, could be wedded to the musical "contexts" that Abstract is currently able to sequence, and then you'd be off to the races.
+(The "rhythm" expressions already in the language, which let you sequence drums to a bit pattern, maybe contain a kernel of this.)
 
 The project also suffers from not being a self-contained musical environment, violating principle #3. That is, it just emits MIDI, and doesn't
 generate its own audio. To hear anything, you have to do something like into a fiddly JACK + MIDI environment like running a softsynth and QJackCtl in separate windows, and wiring everything together just right.
