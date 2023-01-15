@@ -49,6 +49,10 @@ Again, musical expression is a really high-dimensional space, and only something
 That, then, could be wedded to the musical "contexts" that Abstract is currently able to sequence, and then you'd be off to the races.
 (The "rhythm" expressions already in the language, which let you sequence drums to a bit pattern, maybe contain a kernel of this.)
 
+Another thought is that it could be the wrong idea to try to address what is, in the end, a concrete collection of notes, from the analytical level down. A musical language with the kind of power Abstract was supposed to have might need a more "dialectical" approach, with the ability to move up and down the ladder from notes to harmony and harmony to notes, letting the composer specify either and then supporting them with information from the other rung on the ladder.
+
+Rhythm is its own domain and thus probably ought to be another mini-language in the language.
+
 The project also suffers from not being a self-contained musical environment, violating principle #3. That is, it just emits MIDI, and doesn't
 generate its own audio. To hear anything, you have to do something like into a fiddly JACK + MIDI environment like running a softsynth and QJackCtl in separate windows, and wiring everything together just right.
 
