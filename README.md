@@ -17,19 +17,18 @@ The original principles of the project remain good. Arguably, the one we failed 
 
 1. Abstract must be able to make music you'd want to listen to.  
 
-If we do anything else, but not this, we've failed.
+- If we do anything else, but not this, we've failed.
 
 2. Abstract provides a way to compose other than laboriously "plunking down notes".
 
-We want to be able to write music the way we write a computer program, with modular, flexible, abstract parts,
-that can easily be manipulated and refactored.
+- We want to be able to write music the way we write a computer program, with modular, flexible, abstract parts, that can easily be manipulated and refactored.
 
-### 3. Abstract must not be fiddly.
+3. Abstract must not be fiddly.
 
-We want to sit down, flip a switch, and compose.
+- We want to sit down, flip a switch, and compose.
 
 Non-goals of the project included, above all, "livecoding". Abstract was supposed to be for composition, not performance.
-	
+
 
 ## Future ideas
 
