@@ -10,6 +10,7 @@ That all worked decently well. Here's the problem: Abstract ran into the fact th
 it was very hard to find any way to carve interesting musical phrases out of those blocks of marble. It was about this time that the project petered out. At best, what you have
 is a little language for sequencing block chords, like an overly-basic interpretation of a jazz chart.
 
+There are some examples in the `tunes` directory of what it looks like.
 
 ## Principles
 
