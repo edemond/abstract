@@ -27,7 +27,7 @@ The original principles of the project remain good. Arguably, the one we failed 
 
 - We want to sit down, flip a switch, and compose.
 
-Non-goals of the project included, above all, "livecoding". Abstract was supposed to be for composition, not performance.
+Non-goals of the project included, above all, [livecoding](https://en.wikipedia.org/wiki/Live_coding). Abstract was supposed to be for composition, not performance.
 
 
 ## Future ideas
