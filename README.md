@@ -40,6 +40,8 @@ One thing I ran into in the course of building Abstract is that the notion of a 
 
 Chords can be collections of pitches, collections of scale degrees, colletions of intervals, a chord from functional or diatonic harmony, and probably more. All of them are useful in different situations and probably ought to be represented in the language. Abstract has support for most of these, but who knows if the syntax I landed on is a good one.
 
+This doesn't even begin to cover the concept of _voicings_ of a chord, which is another thing I don't think I found a good solution for in the language.
+
 ## Future ideas
 
 Were I to pick this project up again, what I would focus on next is a mini-language for synthesizing musical expressions.
