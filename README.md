@@ -1,6 +1,7 @@
 # Abstract
 
-Circa 2014. This is an attempt to build a language and interpreter for music composition. The core idea was to create musical "contexts" by accreting bits of harmonic and rhythmic information in a short expression,
+Circa 2014. This is an attempt to build a language and interpreter for music composition. The core idea was that the abstractive power of programming languages could be a tool for more quickly exploring and composing musical material.
+Thus, in the language, you create musical "contexts" by accreting bits of harmonic and rhythmic information in a short expression,
 and then to arrange those into a piece of music with combinators to play in parallel or in sequence. It also supports function-like blocks for abstracting and parameterizing repeated sequences.
 
 In that way, composition proceeds top-down, as opposed to bottom-up approaches of other musical languages I'd encountered, where you build up note-by-note. The idea, too, was 
@@ -54,7 +55,7 @@ Another thought is that it could be the wrong idea to try to address what is, in
 Rhythm is its own domain and thus probably ought to be another mini-language in the language.
 
 The project also suffers from not being a self-contained musical environment, violating principle #3. That is, it just emits MIDI, and doesn't
-generate its own audio. To hear anything, you have to do something like into a fiddly JACK + MIDI environment like running a softsynth and QJackCtl in separate windows, and wiring everything together just right.
+generate its own audio. To hear anything, you have to do something like plug it into a JACK + MIDI environment, like running a softsynth and QJackCtl in separate windows, and wiring everything together just right. Or pipe it to outboard gear.
 
 
 ## Build-time dependencies 
