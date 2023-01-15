@@ -1,7 +1,7 @@
 # Abstract
 
 Circa 2014. This is an attempt to build a language and interpreter for music composition. The core idea was to create musical "contexts" by accreting bits of harmonic and rhythmic information in a short expression,
-and then to cobble them together into a piece of music with combinators to play in parallel or in sequence. It also supports function-like blocks for abstracting and parameterizing repeated sequences.
+and then to arrange those into a piece of music with combinators to play in parallel or in sequence. It also supports function-like blocks for abstracting and parameterizing repeated sequences.
 
 In that way, composition proceeds top-down, as opposed to bottom-up approaches of other musical languages I'd encountered, where you build up note-by-note. The idea, too, was 
 that you could abstract sequences and parameterize it with different harmonic information (for example: write a I-IV-V chord progression as a function, then play it in the key of C, or Db, or whichever.)
